@@ -7,18 +7,17 @@ document.body.style.opacity="1";
 
 const staffImages = {
 
-    "M. Rainer": "commissioner.png",
+    "M. Rainer": "mrainer.png",
 
-    "C. Murray": "inspector.png",
+    "C. Murray": "cmurray.png",
 
-    "M. Wallace": "inspector.png",
+    "M. Wallace": "mwallace.png",
 
-    "T. Walker": "sergeant.png",
+    "T. Walker": "twalker.png",
 
-    "T. McKenzie": "sergeant.png"
+    "T. McKenzie": "tmckenzie.png"
 
 };
-
 
 
 const cards =
