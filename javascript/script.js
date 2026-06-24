@@ -1,77 +1,37 @@
-window.addEventListener("load",()=>{
+```javascript
+window.addEventListener("load", () => {
 
-document.body.style.opacity="1";
+    document.body.style.opacity = "1";
 
+    /* COMMAND TEAM IMAGE SYSTEM */
 
-/* STAFF IMAGE SYSTEM */
+    const staffImages = {
 
-const staffImages = {
+        "T. Walker": "twalker.png",
+        "C. White": "cwhite.png",
+        "J. Johnson": "jjohnson.png",
+        "J. Parrott": "jparrott.png",
+        "M. Wallace": "mwallace.png",
+        "M. Rainer": "mrainer.png",
+        "C. Murray": "cmurray.png"
 
-    "M. Rainer": "mrainer.png",
+    };
 
-    "C. Murray": "cmurray.png",
+    const cards = document.querySelectorAll(".card");
 
-    "M. Wallace": "mwallace.png",
+    cards.forEach(card => {
 
-    "T. Walker": "twalker.png",
+        const name = card.dataset.name;
+        const image = card.querySelector(".profile");
 
-    "T. McKenzie": "tmckenzie.png"
+        if (staffImages[name] && image) {
 
-};
+            image.src = "../assets/team/" + staffImages[name];
+            image.alt = name;
 
+        }
 
-const cards =
-document.querySelectorAll(".card");
-
-
-
-cards.forEach(card=>{
-
-
-let name = card.dataset.name;
-
-
-let image =
-card.querySelector(".profile");
-
-
-
-if(staffImages[name]){
-
-image.src =
-"../assets/staff/" + staffImages[name];
-
-image.alt =
-name;
-
-}
-
-
-
-/* HOVER EFFECT */
-
-card.addEventListener(
-"mouseenter",
-()=>{
-
-card.style.transform =
-"translateY(-12px)";
+    });
 
 });
-
-
-
-card.addEventListener(
-"mouseleave",
-()=>{
-
-card.style.transform =
-"translateY(0)";
-
-});
-
-
-});
-
-
-});
+```
